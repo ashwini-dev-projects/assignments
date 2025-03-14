@@ -1,0 +1,211 @@
+Infosys Interview Questions
+
+
+L1 -  TECHNICAL ROUND
+
+1. what are built in datatypes in Python
+2. What are Mutable and Immutable Datatypes and explain briefly
+3. Diff Multi threading and Multi processing
+4. Flask vs Fast API
+5. What is swagger and usage
+6. How to remove an element from a List without using any loop and if condition
+   ans: List1= [1,2,3,4,5]
+   	List1.remove(3)
+
+7. How to update a dict key value
+   ans: dict1{"name": "abc", "num": 123}
+   	dict1["name"] = "xyz"
+   	print(dict1)
+
+8. write a program to check number is prime  or not
+
+9. write a program to get the output
+   input: list1=[1,2,3,4, 5]  
+ 
+	  output= [1,4,27,16, 125]
+
+   ans: # 1--1, 2-- 4, 3--27, 4--16 (1 ** power value of each element), 2 *2 element , 3 * 3 , 4 * 4)
+
+
+list1=[1,2,3,4, 5] 
+
+result = []
+
+for i in range(len(list1)):
+    print(i)
+
+    if list1[i] % 2 == 0:
+    	result.append(list1[i] *  list1[i])
+    else:
+      result.append(list1[i] *  list1[i] *  list1[i])
+
+
+print(result)
+
+10. what are core concepts of OOPs
+
+11. What is abstraction and syntax and usage
+12. What is Inheritance and syntax and usage
+13. write a program using inheritance where child use the attribute from parent using code reusability feature (real time example)
+ans:   Class Parent():
+	def __init__(self,sur_name):
+            self.sur_name = sur_name
+        
+    
+	
+	Class Child1(Parent):
+		def print(f"{super().__init__(sur_name)")
+
+
+	Class Child2(Parent):
+		def print(f"{super().__init__(sur_name)"
+
+14. What is exception and explain and brief about built in exceptions
+
+
+15. How to connect to SQL, Mongo using Python
+16. How to write TestCases
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+L2 - TECHNICAL ROUND
+
+1. Create a tuple with single element
+
+ ans: tuple1 = ((1,))
+
+2. Split the sentence to words and get the abbreviation 
+   usecase: where each word has more than 2 characters then its first char should be uppercase
+
+   Ex: sentence: "Game of Thrones"
+       o/p: GoT
+   ex2: sentence: "Agile methodology program Technique"
+       o/p: AMPT
+
+# sentence= "Game of Thrones" 
+sentence="Agile methodology program Technique"
+
+result = ''
+sentence= sentence.split()
+for each in sentence:
+    if len(each) > 2:
+        result += each[0].upper()
+    else:
+        result += each[0]
+print(result)
+
+
+ 
+
+3. Flattern array program
+
+usecase: [1, [2, 3], [4, [5, 6]], 7]
+o/p: [1,2,3,4,5,6,7]
+
+Ans: #flatten array
+
+def flatten_list(nested_list):
+    flat_list = []
+    for item in nested_list:
+        if isinstance(item, list):
+            flat_list.extend(flatten_list(item))  # Recursively flatten if item is a list
+        else:
+            flat_list.append(item)
+    return flat_list
+
+# Example usage
+nested_list = [1, [2, 3], [4, [5, 6]], 7]
+flattened = flatten_list(nested_list)
+print(flattened)
+
+
+
+4. write a 2 decorators first to find even numbers then divide by 5 numbers using decorators
+
+input:[2,4,6,8,10]
+o/p: [10]
+
+from functools import wraps
+
+# Decorator to filter even numbers
+def filter_even_numbers(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        # Get the list from the function argument (assuming it's passed as the first argument)
+        result = func(*args, **kwargs)
+        
+        # Filter even numbers
+        even_numbers = [x for x in result if x % 2 == 0]
+        
+        return even_numbers
+    return wrapper
+
+# Decorator to multiply numbers by 5
+def multiply_by_5(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        # Get the list from the function argument (assuming it's passed as the first argument)
+        result = func(*args, **kwargs)
+        
+        # Multiply numbers by 5
+        multiplied = [x  for x in result if x % 5==0]
+        
+        return multiplied
+    return wrapper
+
+# Apply the decorators
+@divide_by_5
+@filter_even_numbers
+def get_numbers():
+    return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Call the function
+result = get_numbers()
+print(result)
+
+
+5. OOPs Question where class is Car it has attributes model, mileage, and take class attribute available quantity with 5 initially, and class has Buy() method
+
+input# output: 
+print(Car. Available_qty) # 5
+Toyota = Car("Toyota",500) 
+Toyota.buy() # Toyota Bought
+Benz = Car("Benz", 600) # Benz, 600
+Benz.buy() # Benz Bought
+print(Car. Available_qty) # 3
+
+
+
+ANS:
+
+class Car:
+    available_qty = 5
+    def __init__(self, model, mileage):
+        self.model = model
+        self.mileage = mileage
+    def buy(self):
+        print(f"{self.model} Bought")
+        Car.available_qty -=1
+
+
+print(Car.available_qty ) # 5
+Toyota = Car("Toyota",500) 
+Toyota.buy() # Toyota Bought
+Benz = Car("Benz", 600) # Benz, 600
+Benz.buy() # Benz Bought
+print(Car.available_qty) # 3
+
+
+Theory Questions:
+
+1.Pandas -- diff loc, iloc
+2.Test Cases in APIs -- how to write a test cases for DB operations using insert , update cmnds(ans we can mock the data ffor testing without inserting data to the DB with MOCKING)
+3.diff b/w Django, flask, Fastapi
+4. SQL table with Student name and marks (how to get second highest marks from the table & what are the techniques) ---- ans: Ranking, Order by using Limit, Offset
+5.  How to Check the code coverage and what are all the techniques we use to improve the coverage.
+
+
+
+        
