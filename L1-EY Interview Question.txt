@@ -1,0 +1,60 @@
+1. Difference Between list and tuple sand which is better
+2. what is ansible 
+3. what is terraform
+4. What is CI/CD with bamboo
+5. what is multiple inheritance
+6. answer the question for multiple inheritance
+	
+class A:
+    def fun1(self):
+        print("A")
+ 
+class B(A):
+    def fun1(self):
+        print('B')
+ 
+class C(A):
+    def fun1(self):
+        print("C")
+ 
+class D(B, C):
+    def fun1(self):
+        super().fun1()  
+ 
+obj = D()
+obj.fun1()
+
+7. what is exception write an exception with an example?
+
+
+try:
+    list1 = [1,2,3,4]
+    print(list[10])
+    
+except IndexError as e:
+    print("Index Error", e)
+
+8. what are decorators and usage?
+
+9. input: my_list = [1, 2, 3, 4, 5, 2, 3, 6, 7, 3, 8, 2] using decorators
+   output: #{2: 3, 3: 3}
+
+def frequent_data(func):
+    def wrapper(*args, **kwargs):
+        data = func(*args, **kwargs)
+        result = { i:data.count(i)  for i in data if data.count(i) > 1}
+        # for i in data if data.count(i) > 1
+        return result
+    
+    return wrapper
+
+@frequent_data
+def check_data(arr):  # frequent_data(check_data)
+    return arr
+my_list = [1, 2, 3, 4, 5, 2, 3, 6, 7, 3, 8, 2]
+res = check_data(my_list)
+print(res)
+
+10. what are memory management and how it achieved?
+
+
