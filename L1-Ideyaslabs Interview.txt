@@ -89,4 +89,8 @@ ANS: using requests Library
 
 8) what is the use of decorators
 
+9) How to improve the query optimization
+
+10) Impprove high latency to low latency of api resposne
+
 
