@@ -1,0 +1,69 @@
+L1-Wipro
+
+
+1. Self Intro Asked 
+
+2. Project Roles and Responsibilities
+3. E2E Project adn streams what are teh roles of each stream (DS, DE, API,UI, TESTER)
+
+4. What is the main usecases included in APIs using DB data
+
+5. write a python function to check if two strings are anagrams of each other. eg. race and care
+
+ANS:  def are_anagrams(str1, str2):
+    # Remove spaces and convert to lowercase
+    str1 = str1.replace(" ", "").lower()
+    str2 = str2.replace(" ", "").lower()
+    
+    # Compare sorted versions of both strings
+    return sorted(str1) == sorted(str2)
+
+# Example usage
+print(are_anagrams("race", "care"))   # True
+print(are_anagrams("hello", "world")) # False
+
+
+6. write python function that removes duplicates from a list while maintaining the original order where output must be a list - [1,2,2,3,3,3,4,4,4,4,5,5,5,5,5,100]
+  ans: 
+list1 = [1,2,2,3,3,3,4,4,4,4,5,5,5,5,5,100]
+seen= set()
+result = []
+for each in list1:
+  if each not in seen:
+    seen.add(each)
+    result.append(each)
+print(result)
+
+
+7. # write a python function to check if a string is palindrome. eg. racecar
+str1 = "racecar"
+print(str1[::-1])
+if str1 == str1[::-1]:
+  print("its a polindrome")
+else:
+  print("its not polindrom")
+
+
+
+8. Write an SQL query to fetch the names of all employees in a table named employees where the salary is greater than $50,000. Sort the result alphabetically by name.
+
+Table structure (employees):
+id (INT) - Primary key
+name (VARCHAR)
+salary (INT)
+
+ANS: 
+SELECT name
+FROM employees
+WHERE salary > 50000
+ORDER BY name ASC;
+
+
+
+
+
+
+
+
+
+
