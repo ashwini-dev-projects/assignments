@@ -63,5 +63,11 @@ ans:  Fixed-size collections that overwrite oldest documents when the limit is r
 
 12. How you used Pandas in Application
 
+13. What are Middlewares in Django and usage
+
+14. How to create a view and point to specific url in Django and explain the flow?
+
+15. what is get and filter in Django ORM?
+
 
 
