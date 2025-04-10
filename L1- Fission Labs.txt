@@ -1,0 +1,67 @@
+L1- Fission Labs
+
+
+1. Shallow and Deep Copy difference
+
+2. Decorators
+
+3. Decorators program and usage
+
+ANS:
+ def squares_data(func):
+    def wrapper(*args, **kwargs):
+        arr = func(*args, **kwargs)
+        return [each ** 2 for each in arr]
+    return wrapper
+
+
+@squares_data
+def input_data(arr): # square_data(input_data)
+    return arr
+
+data = [1,2,3,4,5]   
+res = input_data(data)
+print(res)
+
+
+4.  Program to find the largest sum of contiguous integers in the array.  Example: if the input is (-10, 2, 3, -2, 0, 5, -15), the largest sum is 8
+
+
+5. sort the given list in descending order List1 = [1,4,6,10,7,20]
+
+List1.sort(reverse=True)
+print(List1)
+
+ # without using built in methods
+
+   
+a = [1,4,6,10,7,20]
+left =0 
+n = len(a)
+while left < n-1:
+    if a[left] < a[left +1]:
+        a[left], a[left+1] = a[left+1], a[left]
+        left = 0
+    else:
+        left += 1
+print(a)
+
+
+6. Drop, Truncate, Delete diff in SQL
+
+7. Rank, Dense Rank, Row Number
+
+8. how to use huge numbers of lines data while accessing an api and how to maintain good performance in this case (ans: pagination using limit and skip query sending page wise data 1-100 records every time)
+
+9. capped collection in Mongo DB
+
+ans:  Fixed-size collections that overwrite oldest documents when the limit is reached. Great for logs or real-time data.
+
+10. what are status codes in HTTP and describe
+
+11. What are HTTP Methods (GET, POST,PUT,DELET, PATCH)
+
+12. How you used Pandas in Application
+
+
+
