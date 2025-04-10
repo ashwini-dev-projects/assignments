@@ -26,6 +26,20 @@ print(res)
 
 4.  Program to find the largest sum of contiguous integers in the array.  Example: if the input is (-10, 2, 3, -2, 0, 5, -15), the largest sum is 8
 
+ ANS:  
+def max_subarray_sum(arr):
+    max_sum = current_sum = arr[0]
+
+    for num in arr[1:]:
+        current_sum = max(num, current_sum + num)
+        max_sum = max(max_sum, current_sum)
+
+    return max_sum
+
+# Example usage
+arr = [-10, 2, 3, -2, 0, 5, -15]
+print("Maximum contiguous sum is:", max_subarray_sum(arr))
+
 
 5. sort the given list in descending order List1 = [1,4,6,10,7,20]
 
