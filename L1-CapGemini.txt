@@ -1,0 +1,50 @@
+L1- Python + Pyspark (30 min )
+
+1. what are the security methods we can provide for APIs
+
+2. What are the status HTTP status codes we can use
+
+3. what is Base Model in Fast api
+
+
+4.Write a Lambda function to fetch the values which are divisible by 3 from the given list
+input: h = [2,4,6,9,12,33]
+
+ANS:
+new_list=list(filter(lambda x: x% 3 == 0, h))
+print(new_list)
+
+
+5. print how many times the substring got appeared in the given string 
+
+ans:  s = "abmgsjabljdabhijab"  "ab" --> 4 times
+
+s = "abmgsjabljdabhijab"
+
+print(s.count("ab"))
+
+
+6. create a dict using 2 lists, where first list as a keys, and second list as values
+
+h2 = [33,5,6,4,4,7,9]
+
+print(dict(zip(list1, list2)))
+
+7. convert data into pandas then create a new column "B" based on "A" column where values are hgreater than 2 make square of them
+
+
+dict1= {'A': [1, 2, 3, 4, 5]}
+
+import pandas as pd
+
+dict1= {'A': [1, 2, 3, 4, 5]}
+
+df=pd.DataFrame(dict1)
+
+
+df['B'] = df['A'].apply(lambda x: x **2 if x>2 else x)
+
+print(df)
+
+
+
